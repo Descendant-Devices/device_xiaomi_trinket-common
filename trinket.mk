@@ -12,6 +12,11 @@ $(call inherit-product, vendor/xiaomi/trinket-common/trinket-common-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Platform
+PRODUCT_BOARD_PLATFORM := trinket
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
